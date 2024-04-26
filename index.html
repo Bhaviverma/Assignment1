@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photographer Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap JS and jQuery (needed for Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+      defer
+    ></script>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="bg-dark text-white py-4">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">Photographer</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="container contain">
+        <div class="text-center">
+          <h1>Welcome to Photographer Portfolio</h1>
+          <p>Discover the beauty through our lens.</p>
+        </div>
+      </div>
+      <div
+        id="carouselExampleSlidesOnly"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./image/portfolio1.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="./image/portfolio2.jpg" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio my-5">
+      <div class="container">
+        <h2>Portfolio</h2>
+        <div id="portfolio-grid" class="row">
+          <!-- Images will be dynamically added here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+        <div class="row">
+          <!-- Testimonial Text Container -->
+          <div class="col-md-6">
+            <h2>Testimonials</h2>
+            <div class="testimonial-text">
+              <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                vehicula nisl in nisl convallis, et finibus est feugiat.
+                Pellentesque consectetur ullamcorper."
+              </p>
+              <h4>John Doe</h4>
+            </div>
+          </div>
+          <!-- Testimonial Image Carousel Container -->
+          <div class="col-md-6">
+            <div
+              id="carouselExampleFade"
+              class="carousel slide carousel-fade"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="./image/profile/profile1.jpg"
+                    class="img-fluid d-block w-100"
+                    alt="Testimonial Image 1"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./image/profile/profile2.jpg"
+                    class="img-fluid d-block w-100"
+                    alt="Testimonial Image 1"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./image/profile/profile3.jpg"
+                    class="img-fluid d-block w-100"
+                    alt="Testimonial Image 1"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleFade"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img
+              src="./image/profile/profile4.jpg"
+              class="img-fluid rounded-start-pill"
+              alt="Profile Image"
+            />
+          </div>
+          <div class="col-md-6">
+            <h2>About Me</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              euismod semper aliquam. Donec id sapien ac lorem vestibulum
+              dignissim. Nulla ac dolor metus. Praesent porta lacinia lectus,
+              nec suscipit libero porta sit amet. Duis vehicula nisl in nisl
+              convallis, et finibus est feugiat. Pellentesque consectetur
+              ullamcorper.
+            </p>
+            <p>
+              Vivamus mattis magna id nisi viverra, eget aliquam eros venenatis.
+              Vivamus nec mi nec nisi hendrerit eleifend. Nulla eu pretium eros,
+              sit amet venenatis quam. Nulla facilisi. Curabitur auctor ligula
+              eget nulla dapibus, eget efficitur nunc elementum.
+            </p>
+            <p>
+              Vivamus mattis magna id nisi viverra, eget aliquam eros venenatis.
+              Vivamus nec mi nec nisi hendrerit eleifend. Nulla eu pretium eros,
+              sit amet venenatis quam. Nulla facilisi. Curabitur auctor ligula
+              eget nulla dapibus, eget efficitur nunc elementum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Scroll Section -->
+    <section id="image-scroll" class="image-scroll">
+      <div class="">
+        <div class="image-scroll-container">
+          <img src="./image/portfolio1.jpg" alt="Image 1" />
+          <img src="./image/portfolio2.jpg" alt="Image 2" />
+          <img src="./image/portfolio3.jpg" alt="Image 3" />
+          <img src="./image/portfolio4.jpg" alt="Image 1" />
+          <img src="./image/portfolio5.jpg" alt="Image 2" />
+          <img src="./image/portfolio6.jpg" alt="Image 3" />
+          <img src="./image/portfolio1.jpg" alt="Image 1" />
+          <img src="./image/portfolio2.jpg" alt="Image 2" />
+          <img src="./image/portfolio3.jpg" alt="Image 3" />
+          <img src="./image/portfolio4.jpg" alt="Image 1" />
+          <img src="./image/portfolio5.jpg" alt="Image 2" />
+          <img src="./image/portfolio6.jpg" alt="Image 3" />
+          <!-- Add more images as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="row">
+          <!-- Map Container -->
+          <div class="col-md-6">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11001.96515274535!2d77.32041379084994!3d28.577175882601075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce44533db3957%3A0xf3ee381274468a73!2sBhel%20Colony%2C%20BHEL%20Township%2CNoida%2C%20BHEL%20Twp%2C%20Sector%2017%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1714055099841!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <!-- Contact Form -->
+          <div class="col-md-6">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-control"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white py-3">
+      <div class="container">
+        <p class="mb-0">&copy; 2024 Photographer Portfolio</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
